@@ -1,0 +1,185 @@
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Registro de Alumno</title>
+    <link rel="stylesheet" href="../../../public/bootstrap-4.3.1-dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../../../public/css/registro_alumno.css">
+        <link rel="stylesheet" href="../../../public/css/estiloss.css">
+
+	
+</head>
+
+	
+<center>
+<body align="center">
+	 <div id="menu">
+   <from>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+   <img src="../../../public/img/icono.png" width="60" height="60" class="d-inline-block align-top" alt="">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+ 
+  <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+    <ul class="navbar-nav mr-auto mt-4 mt-lg-0" align="center">
+      
+		<li class="nav-item">
+        <a class="nav-link" href="../../../public/vistas/Matricula/matricula.html">Matricular</a>
+      </li>
+		<li class="nav-item ">
+        <a class="nav-link" href="../../../public/vistas/alumno/Registro_alumno.html">Registrar Alumno</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../../../public/vistas/encargado/Registro_encargado.html">Registra Encargado</a>
+      </li>
+		   <li class="nav-item">
+        <a class="nav-link" href="../../../public/vistas/docente/Registro_docente.html">Registra Docente</a>
+      </li>
+       <li class="nav-item ">
+        <a class="nav-link" href="../acerca_admin/Acerca_admin.html">Acerca de</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="../../../index.html">Cerrar Sesión</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+    
+    <div class= "card border-primary mb-3" style="max-width: 50rem;" id="appalumnos">
+       <thead>
+            <div class="card text-white bg-primary mb-1" >
+           
+             <td>
+            <h3 align="center">REGISTRO DE ALUMNOS </h3>
+            </td>
+            </div >
+       </thead>
+      
+        <form action="Registrar_alumno.php" method="POST" class="form-register" onsubmit="Guardar" >
+            <table  cellpadding="5" cellpadding="0">
+
+ <center> <img src="../../../public/img/mochila.ico" id="img"></center>
+<br>
+                <div class="form-row">
+                   <div class="form-group col-md-6">
+                        <label for="inputNombre">Nombre</label>
+                        <input title="Tiene que usar como minimo cinco letras para el Nombre"  type="Nombre" class="form-control" id="nombre_alumnos" name="nombre_alumnos" placeholder="Nombre"pattern="[A-Za-zñÑ ]{5,65}" required type="text" size="20" style="width:150px;height:35px" >
+                    </div>
+                    <br>
+                       <div class="form-group col-md-6">
+                        <label for="inputApellido">Apellido</label>
+                        <input title="Tiene que usar como minimo cinco letras para el Apellido"  type="text" class="form-control" id="apellido_alumno" name="apellido_alumno" placeholder="Apellido " pattern="[A-Za-zñÑ ]{5,65}" required type="text" size="20" style="width:150px;height:35px">
+                    </div>
+                </div>
+				<br>
+                       <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputDiscapacidads">Discapacidad</label>
+                         <select  class="form-control" id="discapacidad_alumno" name="discapacidad_alumno" placeholder="Discapacidad"style="width:150px;height:35px">
+								<option value="autismo">Autismo</option>
+								<option value="Down" selected>Sindrome de Down</option>
+								<option value="tdah" selected>TDAH</option>
+							</select>
+
+                    </div>
+<br>          <div class="form-group col-md-6">
+                        <label for="inputNivel">Nivel de discapacidad</label>
+                        <select  class="form-control" id="nivel_discapacidad" name="nivel_discapacidad" placeholder="Nivel de discapacidad"style="width:150px;height:35px">
+								<option value="avanzado">Avanzado</option>
+								<option value="medio" selected>Medio</option>
+								<option value="bajo" selected>Bajo</option>
+							</select>
+                    </div>
+                </div>
+				<br>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEncargado">Encargado</label>
+                        <input title="Tiene que usar como minimo cinco letras para el Nombre"  type="text" class="form-control"  id="encargado_alumno" name="encargado_alumno" placeholder="Encargado  " pattern="[A-Za-zñÑ ]{5,65}" required type="text" size="20" style="width:200px;height:35px">
+                    </div>
+<br>
+                    <div class="form-group col-md-6">
+                        <label for="inputDireccion">Direccion</label>
+                        <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Direccion" required type="text" cols="30" rows="10" style="width:200px;height:35px">
+                    </div>
+                </div>
+				
+				<br>
+                 <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputTelefono">Telefono</label>
+                        <input title="Tiene que usar el signo (-) despues de los primeros cuatro numeros" type="text" class="form-control" id="telefono" name="telefono" pattern="[0-9]{4}-[0-9]{4}" required type="text" size="8" style="width:200px;height:35px" placeholder="0000-0000">
+                    </div>
+					 <br>
+                    <div class="form-group col-md-6">
+                        <label for="inputAlergico">Alergico a</label>
+                        <input title="Si no es alergico digite la palabra NADA" type="text" class="form-control" id="alergico_a" name="alergico_a" placeholder="Alergico a" required type="text" cols="30" rows="10" style="width:200px;height:35px">
+                    </div>
+					 <br>
+                     <div class="form-group col-md-6">
+                        <label for="inputNivel">Genero</label>
+                        <select  class="form-control" id="genero" name="genero" placeholder="Genero" style="width:150px;height:35px">
+								<option value="femenino">Femenino</option>
+								<option value="maculino" selected>Maculino</option>
+								
+							</select>
+                    </div>
+<br>
+                </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputUsuario">Usuario</label>
+                        <input title="Tiene que usar letras mayusculas, minusculas y numeros digitos, minimo de caracteres tres." type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario  " pattern="[a-zA-Z0-9]{3,15}" required type="text" size="20" style="width:200px;height:35px">
+                    </div>
+					  <br>
+                    <div class="form-group col-md-6">
+                        <label for="inputClave">Contraseña</label>
+                        <input title="Tiene que usar letras mayusculas, minusculas y numeros digitos, minimo de caracteres tres." type="password" class="form-control" id="clave" name="clave" pattern="[a-zA-Z0-9]{3,16}" required type="text" size="10" placeholder="Password" style="width:200px;height:35px">
+                    </div>
+
+                </div>
+                <br>
+                      
+                        <td align="center"> <input class="btn btn-primary" type="submit" value="Guardar" style="width:200px;height:50px"> 
+						<input class="btn btn-warning" type="reset" value="Limpiar" style="width:200px;height:50px"> 
+							<a href="../../vistas/alumno/vistaal.php" class="btn btn-primary"style="width:200	px;height:35px" >Ver Registros</a><br>
+							
+						
+                           </td>
+
+            </table>
+            
+
+        </form>
+        </div>
+       
+
+         
+ </div>
+    
+ <br>
+ <br>
+ <br>
+ <br>
+    
+
+ <footer>
+                                <div class='pie'>
+                                     <p> Copyright © 2019 EMAD.edu <br>
+                                         <a href="">Terminos y condiones</a>  &nbsp;&nbsp;&nbsp;&nbsp; 
+                                         <a href="">Politicas de privacidad</a>
+                                     </p>
+                                </div>
+ </footer>
+
+   <script src="../../../public/bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+    <script src="../../../public/js/jquery-ui-1.12.1/jquery-ui.js"></script>
+
+    </body>	
+    
+     </center>
+</html>

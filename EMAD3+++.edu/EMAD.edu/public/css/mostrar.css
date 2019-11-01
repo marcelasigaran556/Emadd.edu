@@ -1,0 +1,35 @@
+
+ body {
+   background-image: url(../img/sdc.jpg);
+    background-repeat: no-repeat center top;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+   
+        }
+table{
+    align-content: center;
+	    border:  1px #0c0d0d;
+    outline: 250px;
+    height: 350px;
+	width: 60%;
+    background: #5ef7bc;
+    color: #000000;
+    font-size: 18px;
+   
+  border: 6px black solid;
+
+}
+
+input{
+	background: #3ecde6;
+	border: 2px black solid;
+}
+
+.a{
+	background: #3ecde6;
+	border: 2px black solid;
+	
+}

@@ -1,0 +1,126 @@
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../public/bootstrap-4.3.1-dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../../../public/css/registro_encargado.css">
+        <link rel="stylesheet" href="../../../public/css/estiloss.css">
+</head>
+
+
+<center>
+	
+<body align="center">
+	 <div id="menu">
+   <from>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+   <img src="../../../public/img/icono.png" width="60" height="60" class="d-inline-block align-top" alt="">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <br>
+  <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+    <ul class="navbar-nav mr-auto mt-4 mt-lg-0" align="center">
+      
+		<li class="nav-item">
+        <a class="nav-link" href="../../../public/vistas/Matricula/matricula.html">Matricular</a>
+      </li>
+		<li class="nav-item ">
+        <a class="nav-link" href="../../../public/vistas/alumno/Registro_alumno.html">Registrar Alumno</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../../../public/vistas/encargado/Registro_encargado.html">Registra Encargado</a>
+      </li>
+		   <li class="nav-item">
+        <a class="nav-link" href="../../../public/vistas/docente/Registro_docente.html">Registra Docente</a>
+      </li>
+     <li class="nav-item ">
+        <a class="nav-link" href="../acerca_admin/Acerca_admin.html">Acerca de</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="../../../index.html">Cerrar Sesión</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+   <br>
+   <br>
+   <br>
+    <div class="card border-primary mb-3" style="max-width: 25rem;" id="appencargado">
+
+        <thead>
+            <div class="card text-white bg-primary mb-1">
+                <td>
+                </td>
+                <td>
+                    <h5 align="center">REGISTRO DE ENCARGADO </h5>
+                </td>
+            </div>
+        </thead>
+
+        <form action="Registro_encargado.php" method="POST" class="form-register" onsubmit="Guardar">
+
+
+            <table style="HEIGHT:100%;WIDTH:100%;">
+
+                <center> <img src="../../../public/img/people.ico" id="img"></center>
+<br>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputNombre">Nombre</label>
+                        <input title="Tiene que usar como minimo cinco letras para el Nombre" type="text" class="form-control" id="nombre_encargado" name="nombre_encargado" placeholder="Nombre  " pattern="[A-Za-zñÑ ]{5,65}" required type="text" size="20" style="width:150px;height:35px">
+                    </div>
+					<br>
+                    <div class="form-group col-md-6">
+                        <label for="inputApellido">Apellido</label>
+                        <input title="Tiene que usar como minimo cinco letras para el Apellido" type="text" class="form-control" id="apellido_eencargado" name="apellido_encargado" placeholder="Apellido  " pattern="[A-Za-zñÑ ]{5,65}" required type="text" size="20" style="width:150px;height:35px">
+                    </div>
+<br>
+                </div>
+                <div class="form-row" align="center">
+                    <div class="form-group col-md-6" align="center">
+                        <label for="inputDui"> Dui</label>
+                        <input title="Tiene que usar el signo (-) antes del ultimo numero"  type="text" class="form-control" id="dui_encargado" name="dui_encargado" placeholder="Dui  " pattern="[0-9]{8}-[0-9]{1}" required type="text" size="11" style="width:150px;height:35px">
+                    </div>
+<br>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputDireccion">Direccion</label>
+                        <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Direccion" required type="text" cols="30" rows="10" style="width:150px;height:35px"> 
+                    </div>
+<br>
+                    <div class="form-group col-md-6">
+                        <label for="inputTelefono">Telefono</label>
+                       <input title="Tiene que usar el signo (-) despues de los primeros cuatro numeros" type="text" class="form-control"id="telefono" name="telefono" placeholder="Telefono  " pattern="[0-9]{4}-[0-9]{4}" required type="text" size="8" style="width:110px;height:35px">
+                    </div>
+                </div>
+    
+
+
+  
+
+    </table><br><br>
+			  <td align="center"> <input class="btn btn-primary" type="submit" value="Guardar" style="width:110px;height:35px">
+
+        <input class="btn btn-warning" type="reset" value="Limpiar" style="width:110px;height:35px">
+				  <a href="../../vistas/encargado/vistaen.php" class="btn btn-primary"style="width:200	px;height:35px" >Ver Registros</a><br>
+
+       </td>
+    </form>
+    </div>
+   
+    <script src="../../../public/bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+      <script src="../../../public/js/jquery-ui-1.12.1/jquery-ui.js"></script>
+</body>
+  <footer>
+                                <div class='pie'>
+                                     <p> Copyright © 2019 EMAD.edu <br>
+                                         <a href="">Terminos y condiones</a>  &nbsp;&nbsp;&nbsp;&nbsp; 
+                                         <a href="">Politicas de privacidad</a>
+                                     </p>
+                                </div>
+ </footer>
+</center>
+</html>

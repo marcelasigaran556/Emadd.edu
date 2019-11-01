@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Administrador</title>
+    
+ <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum=scale=3.0,minimum-scale=1.0">
+  
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" >
+   <link rel="stylesheet" href="../../bootstrap-4.3.1-dist/css/bootstrap-grid.css">
+   
+    <link rel="stylesheet" href="../../css/login.css">
+	
+
+	
+</head>
+<center>
+	
+	
+	
+	
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<body>
+
+    <div class="card border-primary mb-3" style="max-width: 29rem;">
+       
+        <h1 class="card text-white bg-primary mb-1" align="center">Iniciar Secion como Administrador </h1>
+        <form action="../menu_admin/menu_admin.html" method="POST">
+           <br><br>
+            <table align="center" cellpadding="20" cellpadding="10">
+              <center>  <img src="../../img/c1.png" id="img"></center>
+              <br><br>
+               <div class="form-row">
+                   <!--USUARIO................-->
+                   <div class="form-group col-md-6">
+                        <label for="inputUsuario">Usuario</label>
+                        <i class="fas fa-user-friends"></i>
+                      <input  class="form-control" type="text" id="usuario" name="usuario"  pattern="[a-zA-Z0-9]{3,15}" required type="text" size="20"style="width:200px;height:50px" placeholder="Usuario" align="center"></div>
+                  
+                    <br><br>
+                    <!--CONTRASEÑA................-->
+                       <div class="form-group col-md-6">
+                        <label for="inputClave">Contraseña</label>
+                       <i class="fas fa-key"></i>
+                         <input  class="form-control" type="password" id="clave" name="clave" placeholder="Clave" pattern="[a-zA-Z0-9_]{3,16}" required type="text" size="21" style="width:200px;height:50px" align="center"> 
+                         </div>
+                       
+                  </div>
+                  
+                    <td align="center" > 
+                        <input class="btn btn-primary" type="submit" value="Ingresar" href="../menu_admin/menu_admin.html" style="width:200px;height:50px" >
+                       
+						</td>	
+
+            </table>
+        </form>
+     </div>
+</body>
+ <footer>
+                                <div class='pie'>
+                                     <p> Copyright © 2019 EMAD.edu <br>
+                                         <a href="">Terminos y condiones</a>  &nbsp;&nbsp;&nbsp;&nbsp; 
+                                         <a href="">Politicas de privacidad</a>
+                                     </p>
+                                </div>
+ </footer>
+</center>
+
+<br>
+<br>
+<br>
+<br>
+</html>

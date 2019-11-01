@@ -1,0 +1,57 @@
+body{
+ background-image: url(../img/sdc.jpg);
+     background-repeat: no-repeat center top;
+    margin: :0;
+    padding: 0;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+
+
+}
+
+#img{
+    width: 100px;
+    background: white;
+    border-radius: 10px;
+    
+}
+h2{
+    position: center;
+    font-family: sans-serif;
+}
+
+h4{
+    margin: -5px;
+    font-family: sans-serif;
+}
+
+p{
+    margin: -5px;
+    font-family: sans-serif;
+
+}
+
+/*DISEÑO DEL PIE DE PAGINA*/
+footer {
+    position: fixed;
+    background: #fff;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    padding-top:10px;
+    padding-bottom:10px;
+    color: black;
+}
+
+/*DEFINE LO ANCHO AUTOMATICAMENTE */
+.pie {
+    width:auto;
+    margin:0 auto;
+}
+
+ 
+input[type="submit"], 
+input[type="reset"] {
+background:#60e4ef;	
+}

@@ -1,0 +1,38 @@
+body{
+  background-image: url(../img/sdc.jpg);
+    height: 100px;
+    text-align: center;
+    align-content: center;
+}
+
+h2{
+    position: center;
+    font-family: sans-serif;
+}
+/*DISEÑO DEL PIE DE PAGINA*/
+footer {
+    position: fixed;
+    background: #fff;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    padding-top:10px;
+    padding-bottom:10px;
+    color: black;
+}
+/*DEFINE LO ANCHO AUTOMATICAMENTE */
+.pie {
+    width:0 auto;
+    margin:0 auto;
+}
+
+h5{
+    margin: 10px;
+    font-family: sans-serif;
+}
+#img{
+    width: 100px;
+    background: white;
+  
+    border-radius: 10px;
+    

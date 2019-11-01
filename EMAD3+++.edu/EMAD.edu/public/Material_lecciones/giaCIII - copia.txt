@@ -1,0 +1,168 @@
+use db_ventas
+
+CREATE TABLE  cliente(
+	id_cliente varchar(10) primary key,
+	nombre_cliente varchar(75),
+	genero varchar(10),
+	direccion varchar(100),
+	telefono varchar(20),
+	ciudad varchar(100),
+        fecha_nacimiento date
+	);
+
+	INSERT cliente (id_cliente, nombre_cliente, genero,  direccion, telefono, ciudad) VALUES ('cli01','Jose Ramirez','M','Mun. santa maria','2627-0000','Usulutan');
+	INSERT cliente (id_cliente, nombre_cliente, genero, direccion, telefono,  ciudad) VALUES ('cli02','Alfredo Orellana','M','Mun. santa maria','2627-0001','Usulutan');
+	INSERT cliente (id_cliente, nombre_cliente, genero, direccion, telefono,  ciudad) VALUES ('cli03','Roberto Ayala','M','Mun. santa maria','2627-0002','Usulutan');
+	INSERT cliente (id_cliente, nombre_cliente, genero,  direccion, telefono, ciudad) VALUES ('cli04','Luis Vazquez','M','Mun. santa maria','2627-0004','Usulutan');
+	INSERT cliente (id_cliente, nombre_cliente, genero,  direccion, telefono,  ciudad) VALUES ('cli05','Esmeralda Luna','F','Mun. santa maria','2627-0005','Usulutan');
+	INSERT cliente (id_cliente, nombre_cliente, genero, direccion, telefono,  ciudad) VALUES ('cli06','Maria Quintanilla','F','Mun. Concepcion Batres','2627-0006','Usulutan');
+	INSERT cliente (id_cliente, nombre_cliente, genero,  direccion, telefono,  ciudad) VALUES ('cli07','Vanesa Perez','F','Mun. San ildefonso','2627-0007','Jiquilisco');
+	INSERT cliente (id_cliente, nombre_cliente, genero,  direccion, telefono,  ciudad) VALUES ('cli08','Cecilia Hernandez','F','col. Florez','2627-0008','Jiquilisco');
+	INSERT cliente (id_cliente, nombre_cliente, genero,  direccion, telefono, ciudad) VALUES ('cli09','Mario Aparicio','M','Lourdes','2627-0009','San salvador');
+	INSERT cliente (id_cliente, nombre_cliente, genero,  direccion, telefono,  ciudad) VALUES ('cli10','Yeyzon Gonzales','M','Ereguayquin','2627-0010','Usulutan');
+
+
+CREATE TABLE producto(
+	id_producto varchar(10) primary key,
+        id_proveedor varchar(10), foreign key (id_producto) references proveedor(id_proveedor),
+	nombre_producto varchar(100),
+	precio varchar(20),
+	cantidad varchar(10),
+	fecha_vencimiento date
+	);
+
+	INSERT producto (id_producto, nombre_producto, presentacion, precio,cantidad, fecha_vencimiento) VALUES ('pro01','Jabon','Barra','1.00','2','18/09/2022');
+	INSERT producto (id_producto, nombre_producto, presentacion, precio,cantidad, fecha_vencimiento) VALUES ('pro02','Azucar','Bolsa 5Lb','3.50','2','18/09/2025');
+	INSERT producto (id_producto, nombre_producto, presentacion, precio,cantidad, fecha_vencimiento) VALUES ('pro03','Paquel Scott','Paquete 4 unidades','2','1.00','25/05/2021');
+	INSERT producto (id_producto, nombre_producto, presentacion, precio,cantidad, fecha_vencimiento) VALUES ('pro04','Toallas humedas','Paquete 50 unidades','2.00','2','25/01/2022');
+	INSERT producto (id_producto, nombre_producto, presentacion, precio,cantidad, fecha_vencimiento) VALUES ('pro05','Queso','1 libra','2.00','2','18/09/2022');
+	INSERT producto (id_producto, nombre_producto, presentacion, precio,cantidad, fecha_vencimiento) VALUES ('pro06','Crema','Bolsa','1.00','2','18/10/2021');
+	INSERT producto (id_producto, nombre_producto, presentacion, precio,cantidad, fecha_vencimiento) VALUES ('pro07','Quesillo','Libra','0.90','2','18/11/2022');
+	INSERT producto (id_producto, nombre_producto, presentacion, precio, cantidad,fecha_vencimiento) VALUES ('pro08','Baterias','AA','1.00','2','18/07/2022');
+	INSERT producto (id_producto, nombre_producto, presentacion, precio,cantidad, fecha_vencimiento) VALUES ('pro09','Cafe','Bote','5.00','2','18/01/2022');
+	INSERT producto (id_producto, nombre_producto, presentacion, precio,cantidad, fecha_vencimiento) VALUES ('pro10','Galletas','paquete','2','1.00','18/03/2022');
+
+
+CREATE TABLE detalle_producto(
+	id_detalle_producto varchar(10) primary key,
+	id_producto varchar(10), foreign key (id_producto) references producto(id_producto),
+	presentacion_DP varchar(20),
+	cantidad_DP varchar(10),
+	descuento_DP varchar(10)
+	);
+
+	INSERT detalle (id_detallev, id_producto, precioD, cantidad, descuento) VALUES ('det01','pro01','1.00','3','0.10');
+	INSERT detalle (id_detallev, id_producto, precioD, cantidad, descuento) VALUES ('det02','pro01','1.00','4','0.10');
+	INSERT detalle (id_detallev, id_producto, precioD, cantidad, descuento) VALUES ('det03','pro02','4.00','1','0.05');
+	INSERT detalle (id_detallev, id_producto, precioD, cantidad, descuento) VALUES ('det04','pro03','1.00','1','0.10');
+	INSERT detalle (id_detallev, id_producto, precioD, cantidad, descuento) VALUES ('det05','pro05','2.00','2','0.08');
+	INSERT detalle (id_detallev, id_producto, precioD, cantidad, descuento) VALUES ('det06','pro01','1.00','3','0.10');
+	INSERT detalle (id_detallev, id_producto, precioD, cantidad, descuento) VALUES ('det07','pro06','1.00','3','0.10');
+	INSERT detalle (id_detallev, id_producto, precioD, cantidad, descuento) VALUES ('det08','pro07','1.00','3','0.10');
+	INSERT detalle (id_detallev, id_producto, precioD, cantidad, descuento) VALUES ('det09','pro08','1.00','2','0.10');
+	INSERT detalle (id_detallev, id_producto, precioD, cantidad, descuento) VALUES ('det10','pro01','1.00','1','0.10');
+
+
+CREATE TABLE factura(
+	id_factura varchar(10) primary key,
+	id_cliente varchar(10), foreign key (id_cliente) references cliente(id_cliente),
+	id_detalle_producto varchar(10), foreign key (id_detalle_producto) references detalle_producto(id_detalle_producto),
+	subtotal varchar(10),
+	total varchar(10),
+	fecha_venta date
+	);
+
+	INSERT factura (id_factura, id_cliente, id_detallev, subtotal, total, fecha) VALUES ('fac01','cli01','det01','3.00','3.00','01/05/2019');
+	INSERT factura (id_factura, id_cliente, id_detallev, subtotal, total, fecha) VALUES ('fac02','cli02','det02','4.00','4.00','02/05/2019');
+	INSERT factura (id_factura, id_cliente, id_detallev, subtotal, total, fecha) VALUES ('fac03','cli03','det03','4.00','4.00','05/05/2019');
+	INSERT factura (id_factura, id_cliente, id_detallev, subtotal, total, fecha) VALUES ('fac04','cli04','det04','1.00','1.00','07/05/2019');
+	INSERT factura (id_factura, id_cliente, id_detallev, subtotal, total, fecha) VALUES ('fac05','cli05','det05','4.00','4.00','09/05/2019');
+	INSERT factura (id_factura, id_cliente, id_detallev, subtotal, total, fecha) VALUES ('fac06','cli06','det01','3.00','3.00','28/05/2019');
+	INSERT factura (id_factura, id_cliente, id_detallev, subtotal, total, fecha) VALUES ('fac07','cli07','det07','3.00','3.00','01/06/2019');
+	INSERT factura (id_factura, id_cliente, id_detallev, subtotal, total, fecha) VALUES ('fac08','cli08','det08','3.00','3.00','05/06/2019');
+	INSERT factura (id_factura, id_cliente, id_detallev, subtotal, total, fecha) VALUES ('fac09','cli09','det09','2.00','2.00','10/06/2019');
+	INSERT factura (id_factura, id_cliente, id_detallev, subtotal, total, fecha) VALUES ('fac10','cli01','det01','3.00','3.00','11/06/2019');
+
+CREATE TABLE detalle_cliente(
+	id_detalle_cliente varchar(10) primary key,
+	id_cliente varchar(10), foreign key (id_cliente) references cliente(id_cliente),
+	tipo varchar(30)
+	);
+
+
+CREATE TABLE pedidos(
+	id_pedidos varchar(10) primary key,
+	id_cliente varchar(10), foreign key (id_cliente) references cliente(id_cliente),
+	fecha_pedido date,
+        fecha_entrega date,
+        forma_envio varchar(20),
+        destinatario varchar (50)
+	);
+
+CREATE TABLE detalle_pedido(
+	id_detalle_pedido varchar(10) primary key,
+	id_pedidos varchar(10), foreign key (id_pedidos) references pedidos(id_pedidos),
+	id_producto varchar(10), foreign key (id_producto) references producto(id_producto),
+	presentacion_Dpedido varchar (50),
+	descuento_Dpedido varchar(10)
+	
+	);
+
+CREATE TABLE proveedor (
+	id_proveedor varchar(10) primary key,
+	nombre_proveedor varchar(60),
+        direccion_proveedor varchar (150),
+        telefono_proveedor varchar (9)
+	);
+
+1.Elaborar un procedimiento almacenado que muestre todos los productos que posee la empresa
+
+create procedure SP_producto_empresa
+as
+select producto.nombre_producto,producto.cantidad, producto.precio from producto
+
+execute SP_producto_empresa
+
+2.Elaborar un procedimiento almacenado con un parámetro de entrada
+ (fecha de vencimiento) que muestre todos los productos que posee la empresa 
+que vencen en una fecha en particular.
+
+create PROC SP_Feha_limite
+@fechaVencimiento as date
+as
+update producto set fecha_vencimiento=fecha_vencimiento
+where fecha_vencimiento between '2012-05-19' and '2022-09-18'
+
+exec SP_Feha_limite '2012-05-19'
+
+3.Elaborar un procedimiento almacenados de todas las ventas que se les ha
+ realizado a todos los clientes que son de una ciudad en particular que han
+ comprado cualquier producto durante un mes en particular.
+ (por lo menos 4 parámetros de entrada).
+
+
+
+
+4.Crear un Trigger que se active cuando se actualice un dato de la tabla 
+cliente. Mostrar el registro Actualizado.
+ 
+create trigger trigger1 ON cliente 
+for insert 
+as 
+print'la tabla cliente sea actualizado' ;
+INSERT cliente (id_cliente, nombre_cliente, genero,  direccion, telefono,  ciudad) VALUES ('cli11','Monica Perez','F','Ereguayquin','2637-1110','Usulutan');
+
+
+5.Crear un Trigger que se active al eliminar un registro de la tabla 
+cliente modifique las tablas correspondientes.
+
+create trigger triger2 on cliente
+for delete 
+as 
+print 'ha eliminado un cliente ';
+DELETE FROM cliente WHERE id_cliente = 'cli11';
+
+
+6.Crear un Trigger que borre en cascada sobre la tabla relacionada entre 
+detalle, producto y factura de venta cuando borremos una venta. Mostrar
+ el registro borrado al ejecutar el Trigger.

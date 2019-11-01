@@ -1,0 +1,55 @@
+body{
+ background-image: url(../img/sdc.jpg);
+    background-repeat: no-repeat center top;
+    margin: :0;
+    padding: 0;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+
+}
+.Lecciones{
+    
+    color: #000;
+  width: 300px;
+	margin: 10px auto;
+	background-color: #5aabe6;
+        border: 3px solid #79c6e8;
+	height: 450px;
+	border-radius:20px;
+	padding: 9px 9px 150px 9px;  
+    
+}
+
+.Lecciones input-contenedor{
+      background: #70b7eb;
+      padding: 10px;
+      border-radius: 220px;
+}
+
+
+.Lecciones input[type="text"],
+.Lecciones input[type="password"]{
+   
+    font-size: 16px;
+}
+submit{
+    font-size: 30px;
+}
+.Lecciones input[type="submit"],
+.Lecciones input[type="reset"]{
+    border: none;
+    outline: 40px;
+    height: 40px;
+    background: #401bdd;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+#img{
+    width: 150px;
+    background: white;
+  
+    border-radius: 100px;
+    
+}

@@ -1,0 +1,130 @@
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../public/bootstrap-4.3.1-dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../../../public/css/registro_encargado.css">
+        <link rel="stylesheet" href="../../../public/css/estiloss.css">
+</head>
+
+
+
+<center>
+<body align="center">
+	 <div id="menu">
+   <from>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+   <img src="../../../public/img/icono.png" width="100" height="100" class="d-inline-block align-top" alt="">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <br>
+  <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+    <ul class="navbar-nav mr-auto mt-4 mt-lg-0" align="center">
+      
+		<li class="nav-item">
+        <a class="nav-link" href="../../../public/vistas/Matricula/matricula.html">Matricula Alumno</a>
+      </li>
+		<li class="nav-item ">
+        <a class="nav-link" href="../../../public/vistas/alumno/Registro_alumno.html">Registrar Alumno</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../../../public/vistas/encargado/Registro_encargado.html">Registra Encargado</a>
+      </li>
+		   <li class="nav-item">
+        <a class="nav-link" href="../../../public/vistas/docente/Registro_docente.html">Registra Docente</a>
+      </li>
+     
+       <li class="nav-item ">
+        <a class="nav-link" href="../acerca_admin/Acerca_admin.html">Acerca de</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="../../../index.html">Cerrar Sesión</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+   <br>
+   <br>
+    <div class="card border-primary mb-3" style="max-width: 30rem;" id="appencargado">
+
+        <thead>
+            <div class="card text-white bg-primary mb-1">
+                <td>
+                </td>
+                <td>
+                    <h1 align="center">Matricula Alumnos </h1>
+                </td>
+            </div>
+        </thead>
+
+        <form action="matricula.php" method="POST" class="form-register" onsubmit="Guardar">
+
+
+            <table style="HEIGHT:100%;WIDTH:100%;">
+
+                <center> <img src="../../../public/img/estudi.png" style="width:100px;height:75px"></center>
+<br><br>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputNombre">Nombre</label><br>
+                        <select  class="form-control" id="nombre_alumno" name="nombre_alumno" placeholder="Nombre"  style="width:200px;height:50px" >
+								<option value="Juana Marisol">Juana Marisol</option>
+								<option value="Lorena Maria" selected>Lorena Maria</option>
+							<option value="Luisito ">Luisito</option>
+							<option value="Carlos">Carlos</option>
+							<option value="Karina">Karina</option>
+							
+							</select>
+                    </div><br><br>
+                    <div class="form-group col-md-6">
+                        <label for="inputGrado">Grado</label><br>
+                        <select  class="form-control" id="grado" name="grado" placeholder="Grado"  style="width:200px;height:50px">
+								<option value="primero">Primero</option>
+								
+							</select>
+                    </div>
+
+                </div><br><br>
+				  <div class="form-group col-md-6">
+                        <label for="inputPeriodo">Periodo</label><br>
+                        <select  class="form-control" id="periodo" name="periodo" placeholder="Periodo"  style="width:200px;height:50px" >
+								<option value="primero">Primero</option>
+								<option value="segundo" selected>Segundo</option>
+							<option value="tercero">Tercero</option>
+							</select>
+                    </div>
+               
+
+                
+              
+    
+
+
+   
+
+    </table>
+			<br><br>
+			 <td align="center"> <td><input class="btn btn-primary" type="submit" value="Guardar" style="width:200px;height:50px"></td>
+<br><br>
+       <td> <input class="btn btn-warning" type="reset" value="Limpiar" style="width:200px;height:50px">
+
+        </td>
+    </form>
+    </div>
+   
+    <script src="../../../public/bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+      
+</body>
+  <footer>
+                                <div class='pie'>
+                                     <p> Copyright © 2019 EMAD.edu <br>
+                                         <a href="">Terminos y condiones</a>  &nbsp;&nbsp;&nbsp;&nbsp; 
+                                         <a href="">Politicas de privacidad</a>
+                                     </p>
+                                </div>
+ </footer>
+</center>
+
+</html>

@@ -1,0 +1,44 @@
+
+body {
+    background: #FFFFFF;
+    height: 100px;
+    text-align: center;
+    align-content: center;
+     background-color: #1565b4; 
+}
+.img-rounded{
+    
+}
+h2{
+    position: center;
+    font-family: sans-serif;
+}
+
+h4{
+    margin: -5px;
+    font-family: sans-serif;
+}
+
+p{
+    margin: -5px;
+    font-family: sans-serif;
+
+}
+
+/*DISEÑO DEL PIE DE PAGINA*/
+footer {
+    position: fixed;
+    background: #fff;
+    text-align: center;
+    bottom: 0;
+    width: 95%;
+    padding-top:10px;
+    padding-bottom:10px;
+    color: black;
+}
+
+/*DEFINE LO ANCHO AUTOMATICAMENTE */
+.pie {
+    width:auto;
+    margin:0 auto;
+}
